@@ -23,13 +23,13 @@ HEADERS += NetworkSystem.h \
     MessagesQueue.h
 
 # QtWebsocket
-win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../../QtWebsocket/QtWebsocket/release/ -lQtWebsocket
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../../QtWebsocket/QtWebsocket/debug/ -lQtWebsocket
-else:unix: LIBS += -L$$OUT_PWD/../../QtWebsocket/QtWebsocket/ -lQtWebsocket
+win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../QtWebsocket/QtWebsocket/release/ -lQtWebsocket
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../QtWebsocket/QtWebsocket/debug/ -lQtWebsocket
+else:unix: LIBS += -L$$OUT_PWD/../QtWebsocket/QtWebsocket/ -lQtWebsocket
 
-INCLUDEPATH += $$PWD/../../QtWebsocket/QtWebsocket
-DEPENDPATH += $$PWD/../../QtWebsocket/QtWebsocket
+INCLUDEPATH += $$PWD/../QtWebsocket/QtWebsocket
+DEPENDPATH += $$PWD/../QtWebsocket/QtWebsocket
 
-win32:CONFIG(release, debug|release): PRE_TARGETDEPS += $$OUT_PWD/../../QtWebsocket/QtWebsocket/release/libQtWebsocket.a
-else:win32:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$OUT_PWD/../../QtWebsocket/QtWebsocket/debug/libQtWebsocket.a
-else:unix: PRE_TARGETDEPS += $$OUT_PWD/../../QtWebsocket/QtWebsocket/libQtWebsocket.a
+win32:CONFIG(release, debug|release): PRE_TARGETDEPS += $$OUT_PWD/../QtWebsocket/QtWebsocket/release/libQtWebsocket.a
+else:win32:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$OUT_PWD/../QtWebsocket/QtWebsocket/debug/libQtWebsocket.a
+else:unix: PRE_TARGETDEPS += $$OUT_PWD/../QtWebsocket/QtWebsocket/libQtWebsocket.a

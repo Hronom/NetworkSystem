@@ -1,0 +1,4 @@
+[submodule "QtWebsocket"]
+	path = QtWebsocket
+	url = https://github.com/ant-lafarge/QtWebsocket.git
+	branch = master

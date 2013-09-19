@@ -41,5 +41,5 @@ QtWebsocket::QWsSocket* WebSocketServerWrapper::nextPendingConnection()
         return socket;
     }
     else
-        return NULL;
+        return 0;
 }

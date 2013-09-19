@@ -53,19 +53,19 @@ bool Server::hasPendingConnections()
 Connection* Server::nextPendingConnection()
 {
     QtWebsocket::QWsSocket *wsSocket;
-    wsSocket = NULL;
+    wsSocket = 0;
 
     QMetaObject::invokeMethod(m_webSocketServerWrapper,
                               "nextPendingConnection",
                               Qt::BlockingQueuedConnection,
                               Q_RETURN_ARG(QtWebsocket::QWsSocket*, wsSocket));
 
-    if(wsSocket != NULL)
+    if(wsSocket != 0)
     {
         Connection *connection;
         connection = NetworkSystem::instance()->createConnection(wsSocket);
         return connection;
     }
     else
-        return NULL;
+        return 0;
 }

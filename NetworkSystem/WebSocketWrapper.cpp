@@ -41,7 +41,7 @@ QAbstractSocket::SocketState WebSocketWrapper::state()
     return m_webSocket->state();
 }
 
-void WebSocketWrapper::write(const QByteArray &par_data)
+void WebSocketWrapper::write(const QString &par_data)
 {
     qDebug()<<"Send:";
     qDebug()<<par_data;

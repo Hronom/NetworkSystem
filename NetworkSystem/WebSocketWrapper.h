@@ -25,7 +25,7 @@ public:
     Q_INVOKABLE void connectToHost(const QString &par_address, const quint16 &par_port);
     Q_INVOKABLE QAbstractSocket::SocketState state();
 
-    Q_INVOKABLE void write(const QByteArray &par_data);
+    Q_INVOKABLE void write(const QString &par_data);
 
 signals:
     void newMessageArrives(QString par_message);

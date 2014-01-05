@@ -103,7 +103,7 @@ void Connection::sendMessages()
     QMetaObject::invokeMethod(m_webSocketWrapper,
                               "write",
                               Qt::BlockingQueuedConnection,
-                              Q_ARG(const QByteArray&, doc.toJson(QJsonDocument::Compact)));
+                              Q_ARG(const QString&, doc.toJson(QJsonDocument::Compact)));
 }
 
 void Connection::on_newMessageArrives(QString par_message)
